@@ -1,0 +1,34 @@
+
+.audioPulse {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 2px;
+  height: 24px;
+
+  div {
+    width: 3px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 1px;
+    transition: all 0.1s ease;
+  }
+
+  &.active div {
+    background: #00b4db;
+    animation: pulse 1s ease-in-out infinite;
+  }
+
+  &.hover div {
+    background: #00b4db;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(2);
+  }
+}
